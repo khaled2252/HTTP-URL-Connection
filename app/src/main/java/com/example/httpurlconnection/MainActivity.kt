@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val url = URL(strings[0])
                 val urlConnection = url.openConnection() as HttpURLConnection
+                urlConnection.requestMethod="GET"
                 try {
                     body = URL(strings[0]).readText()
                     code = urlConnection.responseCode
